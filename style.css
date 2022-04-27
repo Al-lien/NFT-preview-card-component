@@ -1,0 +1,208 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body
+{
+	/* Solution pour que le body prenne 100% de l'écran*/
+	min-height: 100vh;
+	margin: 0;
+
+	overflow: hidden;
+	font-family: 'Outfit';
+	background-color: hsl(217, 54%, 11%);
+
+	/* Apparement c'est parfait pour centrer un div dans un div*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+main
+{
+	background-color: hsl(216, 50%, 16%);
+	border-radius: 10px;
+	box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+	width: 350px;
+	height: 595px;
+
+	display: flex;
+	align-content: center;
+	justify-content: center;
+}
+
+.parent 
+{
+	padding: 20px;
+	display: grid;
+	max-height: 95%;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+}
+
+.div1 { grid-area: 1 / 1 / 1 / 3; } 
+.div2 { grid-area: 2 / 1 / 3 / 3; }
+.div3 { grid-area: 3 / 1 / 4 / 3; }
+.div4 { grid-area: 4 / 1 / 5 / 2; }
+.div5 { grid-area: 4 / 2 / 5 / 3; }
+.div6 { grid-area: 5 / 1 / 6 / 3; }
+
+div
+{
+	margin-top: auto;
+	text-align: left;
+}
+
+/* Image NFT */
+
+.div1 
+{ 
+	width: 310px;
+	height: 310px;
+	border-radius: 10px;
+	background-color: cyan;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#card
+{
+  transition: .3s ease;
+	width: 100%;
+	border-radius: 9px;
+	position: absolute; /*permet  de superposer les div dans le div parent (en relative)*/
+}
+
+.middle
+{
+  transition: .5s ease;
+	position: absolute; /*permet  de superposer les div dans le div parent (en relative)*/
+	opacity: 0;
+}
+
+.div1:hover .middle
+{
+	opacity: 1;
+	cursor: pointer;
+}
+
+
+.div1:hover #card
+{
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+/* Titre NFT */
+
+.div2 h1
+{
+	transition: .3s ease;
+	text-align: left;
+	font-weight: 500;
+	font-size: 22px;
+	color: white;
+}
+
+.div2 h1:hover
+{
+	color: cyan;
+	cursor: pointer;
+}
+
+/* Description NFT */
+
+.div3 p
+{
+	text-align: left;
+	font-weight: 100;
+	font-size: 16px;
+	color: hsl(215, 51%, 70%);
+	margin: auto;
+}
+
+/* Prix ETH*/
+
+.div4
+{
+	margin-bottom: 10px;
+	display: inline-flex;
+	text-align: left;
+}
+
+.div4 h2
+{
+	font-weight: 500;
+	font-size: 16px;
+	color: hsl(178, 100%, 50%);
+	margin: 0;
+	padding-left: 10px;
+}
+
+/* Fin enchère */
+
+.div5
+{
+	margin-bottom: 10px;
+	display: inline-flex;
+	justify-content: right;
+
+}
+
+.div5 p
+{
+	padding-left: 10px;
+	font-weight: 100;
+	font-size: 16px;
+	color: hsl(215, 51%, 70%);
+	margin: 0;
+}
+
+/* Nom du créateur */
+
+.div6
+{
+	display: inline-flex;
+	border-top: 0.1px solid hsl(215, 32%, 27%);
+	padding-top: 10px;
+}
+
+.div6 p
+{
+	text-align: left;
+	font-weight: 100;
+	font-size: 16px;
+	color: hsl(215, 51%, 70%);
+	margin: auto;
+	margin-left: 10px;
+}
+
+#name
+{
+	transition: .3s ease;
+	color: white;
+}
+
+#name:hover
+{
+	color: cyan;
+	cursor: pointer;
+}
+
+/* Icone du créateur */
+
+#avatar
+{
+	width: 2em;
+	border: 1px solid white;
+	border-radius: 100%;
+}
+
+
+
